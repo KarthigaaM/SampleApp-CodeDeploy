@@ -1,8 +1,5 @@
 version: 0.1
 phases:
-  pre_build:
-    commands:
-      -  npm install
   build:
     commands:      
       - sam package --template-file template.yml --s3-bucket lambdasampleproject --output-template-file packaged-template.yaml
