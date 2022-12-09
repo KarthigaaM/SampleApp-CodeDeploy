@@ -33,7 +33,7 @@
           }
           break;
           
-    /*      Later in this tutorial, you update this function by uncommenting 
+        Later in this tutorial, you update this function by uncommenting 
             this section. The framework created by AWS SAM detects the update 
             and triggers a deployment by CodeDeploy. The deployment shifts 
             production traffic to the updated version of this function.
@@ -51,7 +51,7 @@
             };
             sc = 200;
             break;
-    */
+    
           default:
             result = {
               "error": "Must specify 'date' or 'time'."
