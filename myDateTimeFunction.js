@@ -37,7 +37,7 @@ const AWS = require('aws-sdk')
         Later in this tutorial, you update this function by uncommenting 
             this section. The framework created by AWS SAM detects the update 
             and triggers a deployment by CodeDeploy. The deployment shifts 
-            production traffic to the updated version of this function.
+            production traffic to the updated version of this functionsssss.
             
             case "time":
             var d = new Date();
