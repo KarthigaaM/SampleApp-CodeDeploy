@@ -23,7 +23,7 @@ Resources:
 # Specifies the deployment configuration      
           Type: Linear10PercentEvery1Minute
 # Specifies Lambda functions for deployment lifecycle hooks
-          Hooks:
+  /*        Hooks:
             PreTraffic: !Ref beforeAllowTraffic
             PostTraffic: !Ref afterAllowTraffic
             
@@ -102,3 +102,4 @@ Resources:
             - nodejs18.x
           LicenseInfo: 'MIT'
           RetentionPolicy: Retain       
+*/
