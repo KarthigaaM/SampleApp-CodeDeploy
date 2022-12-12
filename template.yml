@@ -54,6 +54,8 @@ Resources:
       DeploymentPreference:
         Enabled: false
       Timeout: 5
+      Layers:
+        - !Ref DepLayer
       Environment:
         Variables:
           NewVersion: !Ref myDateTimeFunction.Version
@@ -85,6 +87,18 @@ Resources:
       DeploymentPreference:
         Enabled: false
       Timeout: 5
+      Layers:
+        - !Ref DepLayer
       Environment:
         Variables:
           NewVersion: !Ref myDateTimeFunction.Version
+      DepLayer:
+      Type: AWS::Serverless::LayerVersion
+      Properties:
+          LayerName: sam-app-dependencies
+          Description: Dependencies for SAP Archival app [oracle client]
+          ContentUri: dependencies/
+          CompatibleRuntimes:
+            - nodejs18.x
+          LicenseInfo: 'MIT'
+          RetentionPolicy: Retain       
